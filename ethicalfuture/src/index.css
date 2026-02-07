@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+h1,
+h2,
+h3,
+p,
+span {
+    color: white;
+    @apply text-center;
+}
+
+svg {
+    color: white;
+}
+
+.scroll-animate {
+    animation: pop 1s infinite;
+}
+
+.scale-animate {
+    transform: scale(1);
+    transition: ease-in-out .4s;
+}
+
+.scale-animate:hover {
+    transform: scale(1.2);
+    transition: ease-in-out .4s ;
+}
+
+.section::before {
+    opacity: .4;
+}
+
+.section {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
